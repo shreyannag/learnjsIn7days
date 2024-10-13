@@ -7,10 +7,15 @@
   </head>
   <body>
     <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
     <script>
       /*
         The statements are executed, 
         one by one, in the same order as they are written.
+        variables can be declared either using let / var keyword
+        both can be used interchangeably
         */
       let x, y, z;
       x = 5;
@@ -18,6 +23,42 @@
       z = x + y;
       let name = "SNCC";
       document.getElementById("demo").innerHTML = z + name;
+      /*
+      Variable can be declared in 4 ways:
+      1. var
+      2. let
+      3. const
+      */
+     /*
+     var is primarily used for old browsers like IE(Internet Explorer) 
+     let is for newer browsers like Edge,Firefox,Chrome etc 
+     const is used for variables which values are not supposed to 
+     change called constants
+     */
+    const pi = 3.14;
+    let age = 27;
+    /**
+     * when no values is assigned to a variable
+     * Value = undefined
+     * */ 
+    let m;
+    document.getElementById("demo2").innerHTML = m;
+    /**
+     * When we re-declaring javascript variables with var it will not loose
+     * the original data stored in the variabls
+    */
+   var p = 500;
+   console.log("Orignal data:"+p);
+   //after redeclaring the variable p again
+   var p;
+   console.log("After redeclaring:"+p);
+   /**
+    * But we cannot do the same work with let or const
+   */
+  let k = 600;
+  console.log("Original data:"+k);
+  //let k; //error shows up
+
     </script>
   </body>
 </html>
