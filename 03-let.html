@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Let Uses</title>
+  </head>
+  <body>
+    <h1>See Console to see the outputs</h1>
+    <script>
+      // var is used for global scope and function scope
+      // where let and const is used for block scoped
+      // variables with let must be declared before
+      {
+        let x = 5;
+        console.log("Within the block scope let usage " + x);
+      }
+      //console.log("Outside the blocked scoped "+x) //will show exception error
+      // that is x is not defined
+      /**
+       * where as var always has global scope
+       */
+      {
+        var y = 10;
+        console.log("with the blocked scoped var usage " + y);
+      }
+      //outside the blocked scope var usage
+      console.log("Outside the blocked scope var usage " + y);
+      //let cannot be redeclared
+      let x = "John Doe";
+      console.log("Result: " + x);
+      //let x = 0; //error
+      //where var can be redeclared
+      var m = "SNCC";
+      console.log("Result: " + m);
+      var m = "Number 1 Computer Coaching Classes";
+      console.log(m);
+      //Redeclaring the same variable with let keyword inside the blocked scope
+      //then there is no problem
+      // Here x is 12
+      let p = 12;
+      {
+        let p = 2;
+        // Here x is 2
+        console.log("Result: "+p);
+      }
+      // Here p is 12
+      console.log("Result: "+p);
+      
+    </script>
+  </body>
+</html>
